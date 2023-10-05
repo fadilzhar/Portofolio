@@ -118,8 +118,9 @@ span{
     }
 
 .home-content p{
-    font-size: 1.6rem;
+    font-size: 2rem;
     cursor: default;
+    color: var(--second-text-color);
 }
 .social-media a{
     display: inline-flex;
@@ -168,9 +169,25 @@ span{
 }
 
 .about-img img{
-    width:40vw;
-    border-radius: 10px;
+    width:20vw;
+    border-radius: 20px;
+    animation:floatImage 4s ease-in-out infinite;
 }
+
+    @keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-1.4rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
 
 .heading {
     text-align: center;
@@ -189,7 +206,7 @@ span{
 }
 
 .about-content p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 2rem 0 3rem;
     color: var(--text-color);
 }
@@ -203,7 +220,22 @@ span{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 5rem;
+    animation:floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-1rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
 
 .services-container .services-box {
@@ -416,7 +448,7 @@ span{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
-    color: var(--text-color);
+    color: var(--second-text-color);
     background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
@@ -460,6 +492,7 @@ span{
 
 .footer-iconTop a:hover{
     box-shadow: 0 0 1rem var(--main-color);
+    border-radius: 10px;
 }
 
 .footer-iconTop a i{
